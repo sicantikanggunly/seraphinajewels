@@ -1,6 +1,18 @@
-seraphina-jewels-site/
-├─ index.html
-└─ assets/
-   ├─ css/style.css
-   ├─ js/app.js
-   └─ svg/*.svg
+seraphina-jewels/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── assets/
+│   ├── logo.png           (logo 70x70 dari yang sudah kita buat)
+│   ├── slider1.svg
+│   ├── slider2.svg
+│   ├── slider3.svg
+│   ├── slider4.svg
+│   ├── slider5.svg
+│   ├── slider6.svg
+│   ├── slider7.svg
+│   ├── slider8.svg
+│
+└── README.md
