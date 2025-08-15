@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seraphina Jewels — Elegance in Every Sparkle</title>
+  <meta name="description" content="Seraphina Jewels: perhiasan elegan dengan sentuhan modern.">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="#">
+      <img src="assets/svg/logo.svg" alt="Logo Seraphina Jewels" />
+      <span>Seraphina <strong>Jewels</strong></span>
+    </a>
+    <nav class="nav">
+      <a href="#koleksi">Koleksi</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kritik-saran">Kritik & Saran</a>
+      <a href="#alamat">Alamat</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Buka Keranjang">
+      <img src="assets/svg/cart.svg" alt="" class="icon" />
+      <span id="cartCount" class="badge">0</span>
+    </button>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Kilau yang Bertahan, <span>Kualitas yang Berbicara</span></h1>
+      <p>Temukan koleksi perhiasan pilihan — dirancang dengan detail, untuk momen tak terlupakan.</p>
+      <a class="cta" href="#koleksi">Jelajahi Koleksi</a>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/svg/hero-gem.svg" alt="Ilustrasi berlian berkilau" />
+    </div>
+  </section>
+
+  <main>
+    <section id="koleksi" class="container section">
+      <div class="section-head">
+        <h2>Koleksi Terbaru</h2>
+        <div class="slider-controls">
+          <button id="prevBtn" aria-label="Sebelumnya">&#10094;</button>
+          <button id="nextBtn" aria-label="Berikutnya">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="slider" id="productSlider" aria-live="polite"></div>
+      <p class="muted">* Maksimal 8 produk pada slider.</p>
+    </section>
+
+    <aside id="cartPanel" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Keranjang Belanja</h3>
+        <button id="closeCart" aria-label="Tutup Keranjang">&times;</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">Rp0</strong>
+        </div>
+        <button id="checkoutBtn" class="checkout">Checkout</button>
+      </div>
+    </aside>
+    <div id="overlay"></div>
+
+    <section id="testimoni" class="container section">
+      <h2>Testimoni Pelanggan</h2>
+      <div id="testimonialList" class="testimonials"></div>
+
+      <form id="testimonialForm" class="card">
+        <h3>Tulis Testimoni Anda</h3>
+        <label>Nama
+          <input type="text" name="name" placeholder="Nama Anda" required minlength="2" />
+        </label>
+        <label>Rating
+          <select name="rating" required>
+            <option value="5">5 - Luar Biasa</option>
+            <option value="4">4 - Bagus</option>
+            <option value="3">3 - Cukup</option>
+            <option value="2">2 - Kurang</option>
+            <option value="1">1 - Buruk</option>
+          </select>
+        </label>
+        <label>Pesan
+          <textarea name="message" rows="3" placeholder="Ceritakan pengalaman Anda..." required></textarea>
+        </label>
+        <button type="submit" class="primary">Kirim Testimoni</button>
+      </form>
+    </section>
+
+    <section id="kritik-saran" class="container section">
+      <h2>Kritik & Saran</h2>
+      <form id="feedbackForm" class="card">
+        <label>Nama (opsional)
+          <input type="text" name="name" placeholder="Nama (boleh dikosongkan)" />
+        </label>
+        <label>Kontak (opsional)
+          <input type="email" name="email" placeholder="Email (opsional)" />
+        </label>
+        <label>Pesan
+          <textarea name="message" rows="4" placeholder="Tulis kritik & saran Anda..." required></textarea>
+        </label>
+        <button type="submit" class="primary">Kirim</button>
+        <p class="muted small">Masukan Anda disimpan lokal di peramban (tidak terkirim ke server).</p>
+      </form>
+    </section>
+
+    <section id="alamat" class="container section">
+      <h2>Alamat Toko</h2>
+      <div class="card">
+        <p><strong>Seraphina Jewels</strong></p>
+        <p>JL. suarahatirakyat 30</p>
+        <p>Jam Operasional: 10.00–21.00 (Senin–Minggu)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Tentang Kami</h4>
+        <p>Kami percaya setiap momen berharga pantas dihiasi kilau terbaik.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#koleksi">Koleksi</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#kritik-saran">Kritik & Saran</a></li>
+          <li><a href="#alamat">Alamat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <p>Email: hello@seraphinajewels.example</p>
+        <p>Instagram: @seraphinajewels</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Seraphina Jewels. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
